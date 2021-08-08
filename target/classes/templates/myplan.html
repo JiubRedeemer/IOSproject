@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный план</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header-title">
+                <p><a href="homepage.html" class="header-title-uni">СГТУ</a></p>
+                <p><span>И</span>нформационно<br> <span>О</span>бразовательная<br> <span>С</span>реда</p>
+            </div>
+            <div class="name-user"><span th:text="${fio}"></span></div>
+            <div class="header-menu">
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown__title">
+                        Меню
+                        
+                    </a>
+                    <div class="nav-dropdown__dropdown">
+                        <a
+                            href="homepage.html"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Главная
+                        </a>
+                        <a
+                            href="personal.html"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Мой профиль
+                        </a>
+                        <a
+                            href="#"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Выход
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="myplan">
+        <div class="myplan-header">
+            Учебный план <span>ИВЧТ</span>
+        </div>
+        <div class="myplan-table">
+            <table>
+                <tr>
+                    <th>Дисциплина</th>
+                    <th>Преподаватель</th>
+                    <th>Количество часов</th>
+                    <th>Семестр</th>
+                    <th>Отчетность</th>
+                </tr>
+                <tr>
+                    <td> <a href="object.html">Базы данных</a>
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Фролова Наталья Борисовна
+                        <div class="table-line"></div>
+                    </td>
+                    <td>144
+                        <div class="table-line"></div>
+                    </td>
+                    <td>3
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Экзамен
+                        <div class="table-line"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <a href="object.html">Введение в программную инженерию</a>
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Шульга Татьяна Эриковна
+                        <div class="table-line"></div>
+                    </td>
+                    <td>144
+                        <div class="table-line"></div>
+                    </td>
+                    <td>3
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Дифференцированный зачет
+                        <div class="table-line"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <a href="object.html">История</a>
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Булатов Иван Александрович
+                        <div class="table-line"></div>
+                    </td>
+                    <td>72
+                        <div class="table-line"></div>
+                    </td>
+                    <td>1
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Зачет
+                        <div class="table-line"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <a href="object.html">Программирование</a>
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Вагарина Наталья Сергеевна
+                        <div class="table-line"></div>
+                    </td>
+                    <td>180
+                        <div class="table-line"></div>
+                    </td>
+                    <td>1,2
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Экзамен
+                        <div class="table-line"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <a href="object.html">Проектирование и архитектура программных систем</a>
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Безруков Алексей Иосифович
+                        <div class="table-line"></div>
+                    </td>
+                    <td>144
+                        <div class="table-line"></div>
+                    </td>
+                    <td>4
+                        <div class="table-line"></div>
+                    </td>
+                    <td>Экзамен
+                        <div class="table-line"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <!-- <p>Учебный план</p>
+
+    <div id="teacher" class="teacher">Интерфейс преподавателя</div>
+    <div id="student" class="student">Интерфейс студента</div>
+    <div id="manager" class="manager">Интерфейс менеджера</div>
+    <div id="admin" class="admin">Интерфейс администратора</div>
+    
+    <button class="user-interface" onclick="authorization()">Войти в систему</button>
+
+    <div id="content">
+    </div> -->
+
+    <script src="css/auth.js"></script>
+</body>
+
+</html>

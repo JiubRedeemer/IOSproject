@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles/main.css">
+</head>
+<body>
+    <div class="auth-block">
+        <div class="auth-title"><p>Саратовский Государственный Технический Университет</p></div>
+        <div class="auth-subtitle"><p>Информационно-Образовательная Среда</p></div>
+        <div><img src="css/auth.png" class="auth-image" alt="" width="150" height="150"></div>
+
+        <form th:action="@{/login}" method="post">
+            <div th:if="${param.error}">
+                <div class="alert alert-danger">
+                    Invalid username and password.
+                </div>
+            </div>
+        <div class="auth-login">
+            <img src="css/user.svg" class="login-img" alt="" width="50" height="50">
+            <input class="input-login" type="text" name="username" placeholder="Имя пользователя">
+        </div>
+        <div class="auth-password">
+            <img src="css/lock.svg" alt="" class="password-img" width="50" height="50">
+            <input class="input-password" type="password" name="password" placeholder="Пароль">
+        </div>
+            <input type="submit" class="auth-submit" value="Войти"/>
+        </form>
+    </div>
+</body>
+</html>

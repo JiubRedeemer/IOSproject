@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Главная страница</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header-title">
+                <p><a href="homepage.html" class="header-title-uni">СГТУ</a></p>
+                <p><span>И</span>нформационно<br> <span>О</span>бразовательная<br> <span>С</span>реда</p>
+            </div>
+            <div class="name-user"><span th:text="${fio}"></span></div>
+            <div class="header-menu">
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown__title">
+                        Меню
+                        
+                    </a>
+                    <div class="nav-dropdown__dropdown">
+                        <a
+                            href="personal.html"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Мой профиль
+                        </a>
+                        <a
+                            href="timetable.html"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Расписание
+                        </a>
+                        <a
+                            href="#"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            <form method="post" th:action="@{/logout}">
+                                <input sec:authorize="isAuthenticated()" type="submit" value="Выйти"/>
+                            </form>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main">
+        <div class="main-content">
+            <div class="main-info">
+                <span>Полезная информация:</span>
+                <ul>
+                    <li>1. Сегодня состоится праздник, посвященный такому прекрасному событию, как масленица, на площади перед 1 корпусом в 13:00</li>
+                    <li>2. 24 марта необходимо принести документы для подписания договора (паспорт, снилс)</li>
+                    <li>3. Что-то еще полезное</li>
+                </ul>
+            </div>
+            <div class="main-blocks">
+                <a href="personal.html">
+                    <div class="main-blocks-item">
+                            <div class="main-personal">
+                                <p>Перейти в личный кабинет</p>
+                                <img src="css/personal.svg" alt="" width="75" height="75" class="qqq">
+                            </div>
+                    </div>
+                </a>
+
+                <div class="main-blocks-item">
+                    <span>
+                        <div class="main-myPlan">
+                            <a href="timetable.html">
+                            <p>Расписание</p>
+                            <table>
+                                <tr><td>Программирование</td><td>8:00-9:30</td></tr>
+                                <tr><td>Физ-ра</td><td>9:45-11:15</td></tr>
+                                <tr><td>Базы данных</td><td>11:30-13:00</td></tr>
+                            </table>
+                            </a>
+                        </div>
+                    </span>
+                </div>    
+                
+                <a href="myplan.html">
+                    <div class="main-blocks-item">
+                        <div class="main-myPlan">
+                            <p>Перейти к учебному плану</p>
+                            <img src="css/myPlan.svg" alt="" width="75" height="75">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-page">
+            <img src="css/homeImage.png" alt="">
+        </div>
+    </div>
+    
+    <div class="footer">
+        Полезные ссылки и информация
+    </div>
+</body>
+</html>

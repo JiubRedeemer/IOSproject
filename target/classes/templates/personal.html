@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Личный кабинет</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header-title">
+                <p><a href="homepage.html" class="header-title-uni">СГТУ</a></p>
+                <p><span>И</span>нформационно<br> <span>О</span>бразовательная<br> <span>С</span>реда</p>
+            </div>
+            <div class="name-user"><span th:text="${fio}"></span></div>
+            <div class="header-menu">
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown__title">
+                        Меню
+                        
+                    </a>
+                    <div class="nav-dropdown__dropdown">
+                        <a
+                            href="homepage.html"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Главная
+                        </a>
+                        <a
+                            href="timetable.html"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Расписание
+                        </a>
+                        <a
+                            href="#"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            <form method="post" th:action="@{/logout}">
+                                <button sec:authorize="isAuthenticated()" type="submit">Выход</button>
+                            </form>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="personal-main">
+        <div class="personal-main-content">
+            <div class="personal-main-content-info">
+                <span th:text="${fio}"></span><br>
+                <span>Институт:</span> <span th:text="${institute}"></span><br>
+                <span>Кафедра:</span> <span th:text="${cafedre}"></span><br>
+                <span>Направление:</span> <span th:text="${direction}"></span><br>
+                <span>Курс:</span> <span th:text="${course}"></span><br>
+                <span>Почта:</span> <span th:text="${email}"></span>
+            </div>
+            <div class="personal-main-content-blocks">
+                <button class="personal-function" onclick="sendmessage()" id="personal-function">
+                    Отправить сообщение
+                </button>
+                <button class="personal-change-info" id="personal-change-info">
+                    Привязать другую почту
+                </button>
+            </div>
+            <div class="send-message-active" id="send-message-active">
+
+            </div>
+            <div class="send-message-form" id="send-message-form">
+                <form action="">
+                    <label for="teacher" class="chooseteacher-label">Выберите преподавателя:</label><br>
+                    <div class="dropdown">
+                        <select name="teacher" id="chooseteacher" class="dropdown-select">
+                            <option value="bezrukov">Безруков Алексей Иосифович</option>
+                            <option value="bulatov">Булатов Иван Александрович</option>
+                            <option value="vagarina">Вагарина Наталья Сергеевна</option>
+                            <option value="frolova">Фролова Наталья Борисовна</option>
+                            <option value="shulga">Шульга Татьяна Эриковна</option>
+                        </select>
+                    </div><br>
+                    <label for="text" class="textmessage-label">Введите текст сообщения:</label><br>
+                    <input type="text" class="textmessage"><br>
+                    <button type="submit" value="Отправить сообщение" class="send-message-button">Отправить сообщение</button>
+                </form>
+            </div>
+        </div>
+        <div class="main-img-right">
+            <img src="css/teacher.png" alt="">
+        </div>
+    </section>
+
+
+    <div class="footer">
+        Полезные ссылки и информация
+    </div>
+
+    <script src="css/sendmessage.js"></script>
+</body>
+</html>

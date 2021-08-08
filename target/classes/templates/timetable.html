@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <link rel="stylesheet" href="css/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header-title">
+                <p><a href="homepage.html" class="header-title-uni">СГТУ</a></p>
+                <p><span>И</span>нформационно<br> <span>О</span>бразовательная<br> <span>С</span>реда</p>
+            </div>
+            <div class="name-user"><span th:text="${fio}"></span></div>
+            <div class="header-menu">
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown__title">
+                        Меню
+                        
+                    </a>
+                    <div class="nav-dropdown__dropdown">
+                        <a
+                            href="homepage.html"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Главная
+                        </a>
+                        <a
+                            href="personal.html"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Мой профиль
+                        </a>
+                        <a
+                            href="#"
+                            class="nav-dropdown__dropdown-item"
+                        >
+                            Выход
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="timetable">
+        <div class="timetable-content-days">
+            <div class="timetable-content-days-item">
+                Четная
+            </div>
+            <div class="timetable-content-days-item">
+                Понедельник
+            </div>
+            <div class="timetable-content-days-item">
+                Вторник
+            </div>
+            <div class="timetable-content-days-item">
+                Среда
+            </div>
+            <div class="timetable-content-days-item">
+                Четверг
+            </div>
+            <div class="timetable-content-days-item">
+                Пятница
+            </div>
+            <div class="timetable-content-days-item">
+                Суббота
+            </div>
+        </div>
+        <div class="timetable-content-lesson1">
+            <div class="timetable-content-lesson-item">
+                <div class="timetable-content-lesson-item-first">
+                    1 пара <br>
+                    8.00-9.30
+                </div>
+            </div>
+            <div class="timetable-content-lesson-item">
+
+            </div>
+            <div class="timetable-content-lesson-item">
+                1/464<br>
+                Алгоритмы решения задач<br>
+                (Практика)<br>
+                <span>Львов Алексей Арленович</span>
+            </div>
+            <div class="timetable-content-lesson-item">
+
+            </div>
+            <div class="timetable-content-lesson-item">
+                2/5<br>
+                Военная подготовка <br>
+                <span>Анисимов Игорь Владимирович</span>
+            </div>
+            <div class="timetable-content-lesson-item">
+                1/464<br>
+                Алгоритмы решения задач<br>
+                (Практика)<br>
+                <span>Львов Алексей Арленович</span>
+            </div>
+            <div class="timetable-content-lesson-item">
+
+            </div>
+        </div>
+        <div class="timetable-content-lesson2">
+            <div class="timetable-content-lesson-item">
+                <div class="timetable-content-lesson-item-first">
+                    2 пара<br>
+                    9.45-11.15
+                </div>
+            </div>
+            <div class="timetable-content-lesson-item">
+                Дистант<br>
+                Электротехника<br>
+                (Лекция)<br>
+                <span>Сивяков Борис Константинович</span>
+            </div>
+            <div class="timetable-content-lesson-item">
+                1/464<br>
+                Проектирование интерфейса<br>
+                (Практика)<br>
+                <span>Сытник Ирина Федоровна</span>
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                2/5<br>
+                Военная подготовка <br>
+                <span>Анисимович Игорь Владимирович</span> 
+            </div>
+            <div class="timetable-content-lesson-item">
+                1/468<br>
+                Алгоритмы решения задач<br>
+                (Лекция)<br>
+                <span>Львов Алексей Арленович</span> 
+            </div>
+            <div class="timetable-content-lesson-item">
+                СЗ-1<br>
+                Игровые виды спорта<br>
+                <span>Гордеев Игорь Владимирович</span> 
+            </div>
+        </div>
+        <div class="timetable-content-lesson3">
+            <div class="timetable-content-lesson-item">
+                <div class="timetable-content-lesson-item-first">
+                    3 пара<br>
+                    11.30-13.00
+                </div>
+            </div>
+            <div class="timetable-content-lesson-item">
+                Дистант<br>
+                Электротехника<br>
+                (Лекция)<br>
+                <span>Сивяков Борис Константинович</span> 
+            </div>
+            <div class="timetable-content-lesson-item">
+                СЗ-1<br>
+                Игровые виды спорта<br>
+                <span>Гордеев Игорь Владимирович</span> 
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                2/5<br>
+                Военная подготовка <br>
+                <span>Анисимович Игорь Владимирович</span> 
+            </div>
+            <div class="timetable-content-lesson-item">
+                1/464<br>
+                Проектирование интерфейса<br>
+                (Практика)<br>
+                <span>Сытник Ирина Федоровна</span> 
+            </div>
+            <div class="timetable-content-lesson-item">
+                1/464<br>
+                ООП<br>
+                (Практика)<br>
+                <span>Куприн Станислав Александрович</span> 
+
+            </div>
+        </div>
+        <div class="timetable-content-lesson4">
+            <div class="timetable-content-lesson-item">
+                <div class="timetable-content-lesson-item-first">
+                    4 пара<br>
+                    13.40-15.10
+                </div>
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                1/464<br>
+                Проектирование интерфейса<br>
+                (Практика)<br>
+                <span>Сытник Ирина Федоровна</span> 
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                1/468<br>
+                Базы данных<br>
+                (Лекция)<br>
+                <span>Фролова Наталья Борисовна</span> 
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+        </div>
+        <div class="timetable-content-lesson5">
+            <div class="timetable-content-lesson-item">
+                <div class="timetable-content-lesson-item-first">
+                    5 пара<br>
+                    15.20-16.50
+                </div>
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+            <div class="timetable-content-lesson-item">
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
